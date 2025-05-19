@@ -1,18 +1,21 @@
 // class component
 import React, { Component } from 'react';
+import UserInfor from './UserInfor';
+import DisplayInfor from './DisplayInfor';
 class MyComponent extends React.Component {
-    state = {
-        name: 'Eric',
-        age: 18,
-        address: 'Hanoi',
-    }
+
+
     //JSX 
     render() {
+
+        const myAge = 20;
         return (
             <div> My First Component
+                <UserInfor></UserInfor>
                 <br></br>
-                My name is {this.state.name}
-                My age is {this.state.age}
+                <DisplayInfor name="Giang" age="20" ></DisplayInfor>
+                <hr></hr>
+                <DisplayInfor name="huy" age={30} ></DisplayInfor>
             </div>
         )
     }
